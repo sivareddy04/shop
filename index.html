@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentleman’s Cut Studio | London Barbershop & Salon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        barberdark: '#0f172a',
+                        barbercard: '#1e293b',
+                        barberaccent: '#38bdf8',
+                        barbergold: '#d4af37'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+        }
+        .barber-gradient {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-barbergold selection:text-black">
+
+    <!-- CONCEPT / DEMO BANNER -->
+    <div class="bg-barbergold text-black text-center text-xs font-black py-1.5 px-4 tracking-widest uppercase flex items-center justify-center space-x-2">
+        <i class="fa-solid fa-crown text-slate-950"></i>
+        <span>UK Client Demo Project • Use Promo Code <strong class="underline">GENT20</strong> for 20% Off Your First Cut</span>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-[#0f172a]/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-barbergold flex items-center justify-center text-slate-950 font-black text-lg shadow-md shadow-barbergold/20">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <div>
+                    <span class="text-sm font-black tracking-widest text-white block uppercase font-serif">Gentleman’s Cut</span>
+                    <span class="text-[9px] text-barbergold font-bold tracking-widest uppercase">London Barber Studio</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest text-slate-300 uppercase">
+                <a href="#home" class="hover:text-barbergold transition-colors">Home</a>
+                <a href="#offers" class="text-barbergold hover:underline flex items-center space-x-1"><i class="fa-solid fa-tag mr-1"></i> Offers</a>
+                <a href="#services" class="hover:text-barbergold transition-colors">Services</a>
+                <a href="#barbers" class="hover:text-barbergold transition-colors">Barbers</a>
+                <a href="#reviews" class="hover:text-barbergold transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-barbergold transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/442079460990" target="_blank" class="hidden sm:inline-flex items-center space-x-2 text-emerald-400 border border-emerald-500/30 px-4 py-2 rounded-lg text-xs font-bold hover:bg-emerald-500/10 transition-all">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#booking" class="bg-barbergold hover:bg-yellow-600 text-slate-950 text-xs font-black px-5 py-2.5 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-barbergold/20">
+                    Book Chair
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative py-24 md:py-36 barber-gradient overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-barbergold/10 border border-barbergold/30 px-3.5 py-1.5 rounded-full">
+                    <i class="fa-solid fa-award text-barbergold text-xs"></i>
+                    <span class="text-xs font-black tracking-widest text-barbergold uppercase">Voted #1 Barber Studio in Soho, London</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight uppercase leading-[1.05] font-serif">
+                    Precision Cuts <span class="text-barbergold">&</span> Modern Shaves
+                </h1>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+                    Experience top-tier British barbering in the heart of Soho. Expert fades, classic hot towel shaves, complimentary single-malt whiskey, and immaculate grooming tailored for the modern gentleman.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#booking" class="bg-barbergold hover:bg-yellow-600 text-slate-950 text-xs font-black px-8 py-4 rounded-xl uppercase tracking-widest shadow-xl transition-all flex items-center space-x-2">
+                        <span>Book Your Chair</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="border border-slate-700 hover:border-barbergold text-white text-xs font-black px-8 py-4 rounded-xl uppercase tracking-widest transition-all">
+                        View Services & Prices
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5">
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl space-y-5 backdrop-blur-md">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <h3 class="text-white font-bold text-base font-serif flex items-center">
+                            <i class="fa-regular fa-clock text-barbergold mr-2"></i> Studio Hours
+                        </h3>
+                        <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-emerald-500/30">Open Now</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-300 divide-y divide-slate-800/60">
+                        <li class="flex justify-between pt-1"><span>Mon – Fri:</span> <span class="text-barbergold font-bold">08:00 – 20:00</span></li>
+                        <li class="flex justify-between pt-3"><span>Saturday:</span> <span class="text-barbergold font-bold">09:00 – 18:00</span></li>
+                        <li class="flex justify-between pt-3"><span>Sunday:</span> <span class="text-slate-500 font-bold">Closed</span></li>
+                    </ul>
+                    <div class="pt-2">
+                        <a href="tel:+442079460990" class="block w-full bg-slate-800 hover:bg-slate-700 text-center py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all text-white border border-slate-700">
+                            <i class="fa-solid fa-phone mr-2 text-barbergold"></i> +44 20 7946 0990
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIAL OFFERS SECTION -->
+    <section id="offers" class="py-16 max-w-7xl mx-auto px-6 border-b border-slate-800">
+        <div class="bg-gradient-to-r from-amber-500/10 via-slate-900 to-amber-500/10 border border-barbergold/30 rounded-2xl p-8 sm:p-10 relative overflow-hidden shadow-2xl">
+            <div class="absolute -right-10 -bottom-10 text-barbergold/5 text-9xl font-black font-serif pointer-events-none">
+                <i class="fa-solid fa-percent"></i>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative z-10">
+                <div class="lg:col-span-2 space-y-3">
+                    <span class="text-xs font-black tracking-widest text-barbergold uppercase bg-barbergold/10 px-3 py-1 rounded inline-block">Limited Time Promotions</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white font-serif uppercase">Special Grooming Packages & Offers</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm">Take advantage of our exclusive weekday and first-time client discounts designed for the discerning British professional.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-end">
+                    <div class="bg-slate-900/90 border border-barbergold/40 rounded-xl p-4 text-center flex-1">
+                        <div class="text-barbergold font-black text-xl font-serif">20% OFF</div>
+                        <div class="text-white text-xs font-bold uppercase mt-1">First-Time Clients</div>
+                        <div class="text-[10px] text-slate-400 mt-1">Code: GENT20</div>
+                    </div>
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-center flex-1">
+                        <div class="text-barbergold font-black text-xl font-serif">£15 SAVE</div>
+                        <div class="text-white text-xs font-bold uppercase mt-1">Father & Son Cut</div>
+                        <div class="text-[10px] text-slate-400 mt-1">Saturdays Only</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & PRICES -->
+    <section id="services" class="py-24 max-w-7xl mx-auto px-6 border-b border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-black tracking-widest text-barbergold uppercase mb-2 block">Professional Grooming</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase font-serif">Services & Pricing</h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-3">All services include a complimentary consultation, organic hot towel finish, and beverage of choice.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-barbercard border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-barbergold/50 transition-all group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 text-barbergold flex items-center justify-center text-xl mb-5 group-hover:bg-barbergold group-hover:text-slate-950 transition-all">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-white font-bold text-lg font-serif">Signature Haircut</h3>
+                        <span class="text-barbergold font-black text-xl">£35</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6">Precision cut tailored to your hair type, washed, styled with premium London pomade, and hot neck shave finish.</p>
+                </div>
+                <button onclick="selectService('Signature Haircut', 35)" class="w-full bg-slate-800 hover:bg-barbergold hover:text-black text-xs font-black py-3.5 rounded-xl uppercase tracking-wider transition-all shadow">
+                    Book Service
+                </button>
+            </div>
+            <div class="bg-barbercard border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-barbergold/50 transition-all group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 text-barbergold flex items-center justify-center text-xl mb-5 group-hover:bg-barbergold group-hover:text-slate-950 transition-all">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-white font-bold text-lg font-serif">Hot Towel Beard Trim</h3>
+                        <span class="text-barbergold font-black text-xl">£28</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6">Expert beard sculpting, straight razor lineup, soothing eucalyptus hot towels, and organic conditioning beard oil treatment.</p>
+                </div>
+                <button onclick="selectService('Hot Towel Beard Trim', 28)" class="w-full bg-slate-800 hover:bg-barbergold hover:text-black text-xs font-black py-3.5 rounded-xl uppercase tracking-wider transition-all shadow">
+                    Book Service
+                </button>
+            </div>
+            <div class="bg-barbercard border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-barbergold/50 transition-all group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 text-barbergold flex items-center justify-center text-xl mb-5 group-hover:bg-barbergold group-hover:text-slate-950 transition-all">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-white font-bold text-lg font-serif">The Gentleman’s Combo</h3>
+                        <span class="text-barbergold font-black text-xl">£55</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6">Full signature haircut paired with our luxury hot towel beard trim and facial cleanse. The ultimate executive overhaul.</p>
+                </div>
+                <button onclick="selectService('The Gentleman’s Combo', 55)" class="w-full bg-slate-800 hover:bg-barbergold hover:text-black text-xs font-black py-3.5 rounded-xl uppercase tracking-wider transition-all shadow">
+                    Book Service
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARBER PROFILES -->
+    <section id="barbers" class="py-24 max-w-7xl mx-auto px-6 border-b border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-black tracking-widest text-barbergold uppercase mb-2 block">Master Craftsmen</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase font-serif">Meet Our Barbers</h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-3">Decades of combined master barbering expertise from London, Milan, and New York.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-barbercard border border-slate-800 rounded-2xl overflow-hidden group shadow-xl">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Master Barber" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-barbergold font-bold uppercase tracking-wider">
+                        <span><i class="fa-solid fa-star mr-1"></i> 4.98 Rating</span>
+                        <span>15 Yrs Exp</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center space-y-1">
+                    <h3 class="text-white font-bold text-lg font-serif">Arthur Pendelton</h3>
+                    <p class="text-barbergold text-xs font-bold uppercase tracking-wider">Master Barber & Founder</p>
+                </div>
+            </div>
+            <div class="bg-barbercard border border-slate-800 rounded-2xl overflow-hidden group shadow-xl">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Senior Stylist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-barbergold font-bold uppercase tracking-wider">
+                        <span><i class="fa-solid fa-star mr-1"></i> 4.95 Rating</span>
+                        <span>10 Yrs Exp</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center space-y-1">
+                    <h3 class="text-white font-bold text-lg font-serif">Julian Vance</h3>
+                    <p class="text-barbergold text-xs font-bold uppercase tracking-wider">Fade & Scissor Specialist</p>
+                </div>
+            </div>
+            <div class="bg-barbercard border border-slate-800 rounded-2xl overflow-hidden group shadow-xl">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1622287162691-464014167e46?auto=format&fit=crop&w=600&q=80" alt="Beard Specialist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-barbergold font-bold uppercase tracking-wider">
+                        <span><i class="fa-solid fa-star mr-1"></i> 4.97 Rating</span>
+                        <span>12 Yrs Exp</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center space-y-1">
+                    <h3 class="text-white font-bold text-lg font-serif">Mateo Rossi</h3>
+                    <p class="text-barbergold text-xs font-bold uppercase tracking-wider">Beard & Straight Razor Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPOINTMENT BOOKING -->
+    <section id="booking" class="py-24 max-w-4xl mx-auto px-6 border-b border-slate-800">
+        <div class="bg-barbercard border border-slate-800 rounded-2xl p-8 sm:p-12 shadow-2xl">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-xs font-black tracking-widest text-barbergold uppercase mb-2 block">Online Booking</span>
+                <h2 class="text-3xl font-black text-white uppercase font-serif">Book Your Appointment</h2>
+                <p class="text-slate-400 text-xs mt-2">Instant SMS & Email confirmation for your visit to our Soho London studio.</p>
+            </div>
+
+            <form id="bookingForm" onsubmit="handleBooking(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Full Name</label>
+                        <input type="text" id="bookName" required placeholder="Oliver Sterling" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-barbergold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">UK Phone Number</label>
+                        <input type="tel" id="bookPhone" required placeholder="+44 7700 900077" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-barbergold">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Select Service</label>
+                        <select id="bookService" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-barbergold">
+                            <option>Signature Haircut (£35)</option>
+                            <option>Hot Towel Beard Trim (£28)</option>
+                            <option>The Gentleman’s Combo (£55)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Date</label>
+                        <input type="date" id="bookDate" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-barbergold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Time Slot</label>
+                        <select id="bookTime" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-barbergold">
+                            <option>10:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option selected>2:30 PM</option>
+                            <option>5:00 PM</option>
+                            <option>7:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Promo Code (Optional)</label>
+                    <input type="text" id="bookPromo" placeholder="e.g. GENT20 for 20% off" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barbergold">
+                </div>
+                <button type="submit" class="w-full bg-barbergold hover:bg-yellow-600 text-slate-950 font-black py-4 rounded-xl uppercase tracking-widest text-xs transition-all shadow-lg shadow-barbergold/20">
+                    Confirm Appointment
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-24 max-w-7xl mx-auto px-6 border-b border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-black tracking-widest text-barbergold uppercase mb-2 block">Our Craft</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase font-serif">Studio Gallery</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="h-64 rounded-2xl overflow-hidden border border-slate-800 group shadow-lg">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Work 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="h-64 rounded-2xl overflow-hidden border border-slate-800 group shadow-lg">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Work 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="h-64 rounded-2xl overflow-hidden border border-slate-800 group shadow-lg">
+                <img src="https://images.unsplash.com/photo-1622287162691-464014167e46?auto=format&fit=crop&w=600&q=80" alt="Work 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="h-64 rounded-2xl overflow-hidden border border-slate-800 group shadow-lg">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Work 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="py-24 max-w-7xl mx-auto px-6 border-b border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-black tracking-widest text-barbergold uppercase mb-2 block">Testimonials</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase font-serif">Client Reviews</h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-3">See what our loyal patrons across London have to say about their experience.</p>
+        </div>
+
+        <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-barbercard border border-slate-800 rounded-2xl p-8 shadow-xl">
+                <div class="flex text-barbergold space-x-1 mb-4 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">"Best fade in London by far. Great vibe, complimentary single malt whiskey, and Arthur is a true master."</p>
+                <h4 class="text-white font-bold text-sm">James Harrington</h4>
+                <span class="text-slate-500 text-xs">Verified Patron</span>
+            </div>
+            <div class="bg-barbercard border border-slate-800 rounded-2xl p-8 shadow-xl">
+                <div class="flex text-barbergold space-x-1 mb-4 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">"Immaculate hot towel shave and beard trim. Professional British service from start to finish."</p>
+                <h4 class="text-white font-bold text-sm">Charles Davies</h4>
+                <span class="text-slate-500 text-xs">London, UK</span>
+            </div>
+            <div class="bg-barbercard border border-slate-800 rounded-2xl p-8 shadow-xl">
+                <div class="flex text-barbergold space-x-1 mb-4 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">"Super easy online booking and never have to wait. Highly recommend the Gentleman’s Combo!"</p>
+                <h4 class="text-white font-bold text-sm">William Taylor</h4>
+                <span class="text-slate-500 text-xs">Verified Patron</span>
+            </div>
+        </div>
+
+        <!-- ADD YOUR REVIEW FORM -->
+        <div class="max-w-2xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-2xl">
+            <h3 class="text-white font-bold text-xl font-serif text-center mb-2">Leave Your Review</h3>
+            <p class="text-slate-400 text-xs text-center mb-6">Have you visited our Soho studio? Share your feedback with us.</p>
+            <form id="reviewForm" onsubmit="handleReview(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Your Name</label>
+                        <input type="text" id="reviewName" required placeholder="Alexander Wright" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barbergold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Rating</label>
+                        <select id="reviewRating" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barbergold">
+                            <option value="5">⭐⭐⭐⭐⭐ (5/5 Stars)</option>
+                            <option value="4">⭐⭐⭐⭐ (4/5 Stars)</option>
+                            <option value="3">⭐⭐⭐ (3/5 Stars)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Your Review</label>
+                    <textarea id="reviewText" required rows="3" placeholder="Exceptional craftsmanship and atmosphere..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-barbergold"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-slate-800 hover:bg-barbergold hover:text-black text-white font-bold py-3.5 rounded-xl uppercase tracking-wider text-xs transition-all shadow">
+                    Submit Review
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs font-black tracking-widest text-barbergold uppercase">Location & Contact</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase font-serif">Visit Our Soho Studio</h2>
+                <div class="space-y-4 text-slate-300 text-sm">
+                    <p class="flex items-start space-x-4 bg-barbercard p-4.5 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-location-dot text-barbergold text-lg mt-0.5"></i>
+                        <span><strong class="text-white block text-base mb-0.5">Address</strong>14 Beak Street, Soho, London W1F 9RD, UK</span>
+                    </p>
+                    <p class="flex items-start space-x-4 bg-barbercard p-4.5 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-phone text-barbergold text-lg mt-0.5"></i>
+                        <span><strong class="text-white block text-base mb-0.5">Phone</strong>+44 20 7946 0990</span>
+                    </p>
+                    <p class="flex items-start space-x-4 bg-barbercard p-4.5 rounded-xl border border-slate-800">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-lg mt-0.5"></i>
+                        <span><strong class="text-white block text-base mb-0.5">WhatsApp Booking</strong>+44 7700 900077</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-barbercard border border-slate-800 rounded-2xl p-4 shadow-2xl">
+                <div class="h-80 bg-slate-900 rounded-xl flex flex-col items-center justify-center text-center p-6 border border-slate-800 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-map-location-dot text-barbergold text-5xl mb-3"></i>
+                        <h4 class="text-white font-extrabold text-lg font-serif">Gentleman’s Cut Studio</h4>
+                        <p class="text-slate-400 text-xs mt-1">Soho, London W1F 9RD</p>
+                        <a href="https://maps.google.com/?q=14+Beak+Street+Soho+London" target="_blank" class="mt-5 inline-block bg-barbergold hover:bg-yellow-600 text-slate-950 font-black px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition-all shadow">
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 text-center text-slate-500 text-xs uppercase tracking-widest">
+        <div class="max-w-7xl mx-auto px-6 space-y-2">
+            <p class="text-white font-bold text-sm font-serif">Gentleman’s Cut Studio — London, UK</p>
+            <p>© 2026 Gentleman’s Cut. All Rights Reserved. UK Client Demo Project.</p>
+        </div>
+    </footer>
+
+    <!-- NOTIFICATION MODAL -->
+    <div id="notificationModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
+        <div class="bg-barbercard border border-slate-800 rounded-2xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-barbergold/20 text-barbergold flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 id="modalTitle" class="text-white font-extrabold text-lg uppercase font-serif">Success</h3>
+            <p id="modalMessage" class="text-slate-300 text-xs leading-relaxed"></p>
+            <button onclick="closeNotification()" class="bg-barbergold hover:bg-yellow-600 text-slate-950 text-xs font-black px-5 py-3 rounded-xl uppercase tracking-wider w-full shadow">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function selectService(name, price) {
+            const select = document.getElementById('bookService');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].text.includes(name)) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            window.location.href = "#booking";
+            showModal("Service Selected", `"${name} (£${price})" has been selected in your appointment booking form below.`);
+        }
+
+        function handleBooking(event) {
+            event.preventDefault();
+            const name = document.getElementById('bookName').value;
+            const date = document.getElementById('bookDate').value;
+            const time = document.getElementById('bookTime').value;
+            const service = document.getElementById('bookService').value;
+            const promo = document.getElementById('bookPromo').value.trim();
+
+            let promoText = "";
+            if (promo.toUpperCase() === "GENT20") {
+                promoText = " Promo code GENT20 applied successfully (20% off) — payable in studio.";
+            }
+
+            showModal("Appointment Confirmed! ✂️", `Thank you, ${name}! Your booking for ${service} on ${date} at ${time} at our Soho London studio is confirmed.${promoText}`);
+            document.getElementById('bookingForm').reset();
+        }
+
+        function handleReview(event) {
+            event.preventDefault();
+            const name = document.getElementById('reviewName').value;
+            const rating = parseInt(document.getElementById('reviewRating').value);
+            const text = document.getElementById('reviewText').value;
+
+            const grid = document.getElementById('reviewsGrid');
+            const stars = '<i class="fa-solid fa-star"></i>'.repeat(rating);
+
+            const card = document.createElement('div');
+            card.className = "bg-barbercard border border-slate-800 rounded-2xl p-8 shadow-xl animate-fade-in";
+            card.innerHTML = `
+                <div class="flex text-barbergold space-x-1 mb-4 text-sm">${stars}</div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">"${text}"</p>
+                <h4 class="text-white font-bold text-sm">${name}</h4>
+                <span class="text-slate-500 text-xs">Verified Patron</span>
+            `;
+            grid.prepend(card);
+
+            showModal("Review Submitted! ⭐", "Thank you for sharing your feedback with Gentleman’s Cut Studio.");
+            document.getElementById('reviewForm').reset();
+        }
+
+        function showModal(title, message) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalMessage').innerText = message;
+            document.getElementById('notificationModal').classList.remove('hidden');
+        }
+
+        function closeNotification() {
+            document.getElementById('notificationModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
